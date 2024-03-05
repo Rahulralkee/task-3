@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weatherApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Weather App</title>
+  <link rel="stylesheet" href="task3.css">
+</head>
+<body ng-controller="WeatherController">
+  <div class="container">
+    <h1>Real-time Weather App</h1>
+    <div class="weather">
+      <div class="location">{{ weatherData.name }}, {{ weatherData.sys.country }}</div>
+      <div class="temperature">{{ weatherData.main.temp }}°C</div>
+      <div class="description">{{ weatherData.weather[0].description }}</div>
+    </div>
+    <div class="error" ng-show="error">{{ error }}</div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="task3.js"></script>
+</body>
+</html>
